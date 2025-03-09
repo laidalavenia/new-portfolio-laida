@@ -1,1 +1,1 @@
-# ethan-portfolio-starter
+# laida-portfolio-starter
