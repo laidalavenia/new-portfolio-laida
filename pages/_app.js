@@ -1,19 +1,19 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
-import { Sora } from "next/font/google";
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
+import Transition from "../components/Transition";
+import { useRouter } from "next/router";
+import { AnimatePresence, motion } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
   return (
     <Layout>
-      <div className="page w-full h-screen">
-        <Component {...pageProps} />
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div key={router.route} className="h-full">
+          <Transition />
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
     </Layout>
   );
 }
