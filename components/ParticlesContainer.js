@@ -13,13 +13,14 @@ const ParticlesContainer = () => {
 
   return (
     <Particles
-      className=" w-full h-full absolute translate-z-0"
+      className=" w-full h-full absolute top-0 left-0 z-10"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
         fullScreen: {
           enable: false,
+          // zIndex: 1,
         },
         background: {
           color: {

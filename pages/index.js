@@ -53,7 +53,9 @@ const Home = () => {
           <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
         </div>
         {/* particles */}
-        <ParticlesContainer/>
+        <div className="w-full h-full absolute inset-0 z-[1]">
+          <ParticlesContainer />
+        </div>
 
         {/* Avatar img */}
         <motion.div
@@ -62,7 +64,7 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
+          className="w-full h-full max-w-[680px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] z-[2]"
         >
           <Avatar />
         </motion.div>
